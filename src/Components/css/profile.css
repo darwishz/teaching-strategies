@@ -1,0 +1,165 @@
+/* 0) Page background */
+.profile-page {
+    /* ← restore the page background here */
+    background-image: url('../../assets/Images/home-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    min-height: 100vh;
+    padding-top: 82px;
+    box-sizing: border-box;
+  }
+  
+  /* 1) Solid content card */
+  .profile-page .profile-content {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    background-color: #F1F1F1;
+    border-radius: 12px;
+    padding: 40px 30px 80px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  /* 2) Two-column layout */
+  .profile-page .profile-form-col    { flex: 0 0 40%; }
+  .profile-page .profile-history-col { flex: 0 0 60%; }
+  
+  /* 3) Form heading */
+  .profile-page .profile-form-col h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* 4) Grid for label, input, icon */
+  .profile-page .form-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 24px;
+    column-gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .profile-page .form-row label {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  /* 5) Pill-shaped inputs */
+  .profile-page .input-with-icon {
+    grid-column: 2;
+    position: relative;
+  }
+  .profile-page .input-with-icon input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 16px;
+    border-radius: 50px;
+    border: 1px solid #CCC;
+    background: #FFF;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* 6) Pencil icon */
+  .profile-page .edit-icon {
+    grid-column: 3;
+    justify-self: start;
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  /* 7) Change password under inputs */
+  .profile-page .change-password {
+    grid-column: 2 / span 2;
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* 8) Logout indented under inputs */
+  .profile-page .btn-logout {
+    grid-column: 2 / span 2;
+    padding: 10px 32px;
+    border-radius: 50px;
+    border: none;
+    background: #D9D9D9;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .profile-page .btn-logout:hover {
+    background: #C0C0C0;
+  }
+  
+  /* 9) History styling */
+  .profile-page .profile-history-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .profile-page .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .profile-page .history-card {
+    display: flex;
+    align-items: center;
+    background: #FFF;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .profile-page .history-card img {
+    width: 240px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 24px;
+  }
+  .profile-page .history-info {
+    flex: 1;
+  }
+  .profile-page .history-info p {
+    margin: 6px 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  .profile-page .history-date {
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* 10) Responsive */
+  @media (max-width: 900px) {
+    .profile-page .profile-content {
+      flex-direction: column;
+      padding: 20px 10px 40px;
+    }
+    .profile-page .form-row {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .profile-page .change-password,
+    .profile-page .btn-logout {
+      grid-column: auto;
+    }
+    .profile-page .history-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .profile-page .history-card img {
+      margin: 0 auto 16px;
+    }
+    .profile-page .history-date {
+      margin: 12px 0 0;
+    }
+  }
+  

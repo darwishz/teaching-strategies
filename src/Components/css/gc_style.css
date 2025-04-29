@@ -1,0 +1,98 @@
+body {
+    background-color: #F1F1F1 !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+
+button:active,
+button:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.getrec-1-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.getrec-1-container .image-container img {
+    width: 100%;
+}
+
+.getrec-1-container .getrec-1-text-container {
+    width: 50%;
+}
+
+
+.getrec-1-container .getrec-1-text-container h1 {
+    font-family: 'Abhaya Libre';
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.getrec-1-container .getrec-1-text-container h2 {
+    font-family: 'Abhaya Libre';
+    font-size: 33px;
+    font-weight: bold;
+    margin: 20px 20px 40px 50px;
+}
+
+.getrec-1-container .getrec-1-text-container #f30{
+    font-size:30px;
+    font-family: 'Abhaya Libre';
+}
+
+.getrec-1-container .getrec-1-text-container #f18{
+    font-size:18px;
+    font-family: 'Abhaya Libre';
+}
+
+.getrec-1-container .getrec-1-text-container label {
+    font-size: 18px;
+    font-family: 'Abhaya Libre';
+}
+
+.getrec-1-container .getrec-1-text-container input {
+    width: 80%; /* Makes the elements take the full width of the container */
+    padding: 15px; /* Adds padding for more spacing inside */
+    border-width: 0px;
+    font-size: 16px; /* Increases font size */
+    font-family: 'Abhaya Libre';
+    border-radius: 200px; /* Optional: Rounded corners */
+    margin-bottom: 10px; /* Adds space below each input/select */
+}
+
+.getrec-1-container .getrec-1-text-container select{
+    width: 60%; /* Makes the elements take the full width of the container */
+    padding: 15px; /* Adds padding for more spacing inside */
+    border-width: 0px;
+    font-size: 16px; /* Increases font size */
+    font-family: 'Abhaya Libre';
+    border-radius: 200px; /* Optional: Rounded corners */
+    margin-bottom: 10px; /* Adds space below each input/select */
+}
+
+.getrec-1-container .button {
+    background-color: #D9D9D9;
+    color: #363636;
+    border-radius: 200px;
+    width: 213.42px;
+    height: 58px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transform: translateX(300px);
+    font-size: 25px;
+    font-family: 'Abhaya Libre';
+}
+
+
+
+.getrec-1-container .button:hover {
+    background-color: #B5B5B5;
+}
