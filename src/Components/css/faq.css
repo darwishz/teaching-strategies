@@ -1,0 +1,61 @@
+/* src/Components/css/faq.css */
+
+/* ── Back link at top of card ── */
+.faq-back {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .faq-back-btn {
+    display: inline-block;
+    font-size: 1rem;
+    color: #363636;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  .faq-back-btn:hover {
+    background-color: rgba(0,0,0,0.05);
+  }
+  
+  /* ── Tweak the card padding so back-button fits nicely ── */
+  .faq-card {
+    padding-top: 20px;   /* less top padding */
+    padding-bottom: 40px;
+  }
+  
+  /* ── FAQ list ── */
+  .faq-list {
+    margin-top: 20px;
+  }
+  .faq-item {
+    margin-bottom: 24px;
+  }
+  .faq-question {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  .faq-answer {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #555;
+    padding-left: 12px;
+    border-left: 3px solid #e6b584;
+  }
+  
+  /* ── On very small screens, tighten up margins ── */
+  @media (max-width: 600px) {
+    .faq-back-btn {
+      font-size: 0.9rem;
+      padding: 4px 8px;
+    }
+    .faq-question {
+      font-size: 1.1rem;
+    }
+    .faq-answer {
+      font-size: 1rem;
+    }
+  }
+  
