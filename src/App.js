@@ -15,6 +15,7 @@ import AboutUs        from "./Components/Pages/AboutUs/AboutUs";
 import Profile        from "./Components/Pages/Profile/Profile";
 import Logout         from "./Components/Pages/Login/Logout";
 import FAQ            from './Components/Pages/HelpAndSupport/FAQ';
+import ContactUsHelp from "./Components/Pages/HelpAndSupport/ContactUs";
 
 // Stub components for pages you haven’t built yet:
 const ComingSoonGetRec = () => (
@@ -67,7 +68,8 @@ function App() {
             <Route path="/help-support"   element={wrap(HelpAndSupport)} />
             <Route path="/aboutus"        element={wrap(AboutUs)} />
             <Route path="/help-support/faq" element={wrap(FAQ)} />
-
+            <Route path="/help-support/contact-us" element={wrap(ContactUsHelp)}
+  />
             {/* Logout clears state & redirects to login */}
             <Route path="/logout" element={<Logout />} />
 

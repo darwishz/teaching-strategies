@@ -1,11 +1,25 @@
-/* src/Components/css/faq.css */
-
-/* ── Back link at top of card ── */
-.faq-back {
-    text-align: left;
-    margin-bottom: 20px;
+/* ── Position & spacing for the FAQ card ── */
+.faq-card {
+    /* clear the sticky header (e.g. 80px tall) */
+    margin-top: 80px;
+  
+    /* let us absolutely position the bottom link */
+    position: relative;
+  
+    /* internal padding:
+       top: 20px (your existing space)
+       right/left: 20px
+       bottom: 60px (room for bottom link) */
+    padding: 20px 20px 60px;
   }
-  .faq-back-btn {
+  
+  /* ── Bottom-corner back link ── */
+  .faq-back-bottom {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+  }
+  .faq-back-bottom a {
     display: inline-block;
     font-size: 1rem;
     color: #363636;
@@ -14,17 +28,11 @@
     border-radius: 6px;
     transition: background-color 0.2s ease;
   }
-  .faq-back-btn:hover {
+  .faq-back-bottom a:hover {
     background-color: rgba(0,0,0,0.05);
   }
   
-  /* ── Tweak the card padding so back-button fits nicely ── */
-  .faq-card {
-    padding-top: 20px;   /* less top padding */
-    padding-bottom: 40px;
-  }
-  
-  /* ── FAQ list ── */
+  /* ── FAQ Question / Answer Styling ── */
   .faq-list {
     margin-top: 20px;
   }
@@ -45,17 +53,13 @@
     border-left: 3px solid #e6b584;
   }
   
-  /* ── On very small screens, tighten up margins ── */
+  /* ── Responsive tweaks ── */
   @media (max-width: 600px) {
-    .faq-back-btn {
+    .faq-question { font-size: 1.1rem; }
+    .faq-answer   { font-size: 1rem; }
+    .faq-back-bottom a {
       font-size: 0.9rem;
       padding: 4px 8px;
-    }
-    .faq-question {
-      font-size: 1.1rem;
-    }
-    .faq-answer {
-      font-size: 1rem;
     }
   }
   
