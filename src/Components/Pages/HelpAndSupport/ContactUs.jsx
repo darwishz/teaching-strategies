@@ -1,24 +1,21 @@
 // src/Components/Pages/HelpAndSupport/ContactUs.jsx
 
-import React, { useState, useEffect } from 'react';
-import { Link }                       
-       from 'react-router-dom';
-import { db }                         
-       from '../../../firebaseConfig';
-import { collection, addDoc, Timestamp } 
-       from 'firebase/firestore';
+import { addDoc, collection, Timestamp } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { db } from '../../../firebaseConfig';
 
 // icons…
-import contactIcon   from '../../../assets/Images/contact_icon.png';
-import emailIcon     from '../../../assets/Images/email_icon.png';
-import linkedinIcon  from '../../../assets/Images/linkedin-icon.png';
+import contactIcon from '../../../assets/Images/contact_icon.png';
+import emailIcon from '../../../assets/Images/email_icon.png';
+import facebookIcon from '../../../assets/Images/facebook-icon.png';
 import instagramIcon from '../../../assets/Images/instagram-icon.png';
-import youtubeIcon   from '../../../assets/Images/youtube-icon.png';
-import facebookIcon  from '../../../assets/Images/facebook-icon.png';
+import linkedinIcon from '../../../assets/Images/linkedin-icon.png';
+import youtubeIcon from '../../../assets/Images/youtube-icon.png';
 
 // shared HnS layout + this page’s own CSS
-import '../../css/hns.css';
 import '../../css/contact.css';
+import '../../css/hns.css';
 
 export default function ContactUsHelp() {
   const [form,   setForm]   = useState({ name:'', email:'', subject:'', message:'' });
