@@ -1,0 +1,162 @@
+.quiz-gen-layout {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  background: url('../../assets/Images/home-bg.png') center/cover no-repeat;
+  background-color: #f1f1f1;
+  min-height: 80vh;
+}
+
+.quiz-gen-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  /* widened here */
+  max-width: 900px;
+  width: 90%;
+}
+
+.quiz-gen-card h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #363636;
+}
+
+.quiz-gen-question {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+}
+.quiz-gen-question:last-child { border: none; }
+
+.q-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.q-header span { font-weight: bold; color: #333; }
+
+.small-btn {
+  background: none;
+  border: none;
+  color: #e63400;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.q-text,
+.q-option input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.q-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.q-option span { flex: 1; }
+
+.add-opt-btn {
+  background: #363636;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-opt-btn:hover { background: #e6b584; color: #363636; }
+
+.quiz-gen-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.action-btn {
+  background: #363636;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.action-btn:hover { background: #e6b584; color: #363636; }
+.quiz-gen-card {
+  position: relative;
+  padding-bottom: 80px; /* room for the back link */
+}
+
+/* The back-link itself */
+.quiz-gen-back-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+
+  /* ↑ increased padding & font size ↓ */
+  padding: 12px 24px;
+  font-size: 1.2rem;
+
+  background: #363636;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.quiz-gen-back-btn:hover {
+  background: #e6b584;
+  color: #363636;
+}
+
+/* in quiz-generator.css add if missing */
+.notification-box {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e6b584;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  z-index: 10;
+}
+.notification-box.error {
+  background-color: #d9534f;
+}
+/* ─── Bigger question textarea font ─── */
+.quiz-gen-card .q-text {
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+/* ─── Bigger option text in both edit & preview ─── */
+.quiz-gen-card .q-option input[type="text"],
+.quiz-gen-card .q-option span {
+  font-size: 1.2rem;
+}
+
+/* ─── Bigger “Q1:” labels ─── */
+.quiz-gen-card .q-header span {
+  font-size: 1.3rem;
+}
+
+/* ─── Slightly larger small/remove button ─── */
+.quiz-gen-card .small-btn {
+  font-size: 1.2rem;
+}
+
+/* ─── Larger “+ Add Option” and action buttons ─── */
+.quiz-gen-card .add-opt-btn,
+.quiz-gen-card .action-btn {
+  font-size: 1.15rem;
+  padding: 10px 16px;
+}

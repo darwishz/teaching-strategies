@@ -37,7 +37,7 @@ export default function Login() {
         'username',
         identifier.includes('@') ? emailToUse.split('@')[0] : identifier
       );
-      navigate('/home');
+      navigate('/');
     } catch {
       setError('Username/Email and password do not matched. Please try again.');
     }

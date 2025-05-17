@@ -17,15 +17,17 @@ import Logout         from "./Components/Pages/Login/Logout";
 import FAQ            from './Components/Pages/HelpAndSupport/FAQ';
 import ContactUsHelp from "./Components/Pages/HelpAndSupport/ContactUs";
 
+import FeaturesLanding from "./Components/Pages/Features/FeaturesLanding";
+import Repository      from "./Components/Pages/Features/Repository";
+import QuizGenerator   from "./Components/Pages/Features/QuizGenerator";
+import MyQuizzes       from "./Components/Pages/Features/MyQuizzes";
+import Analytics       from "./Components/Pages/Features/Analytics";
+
+
 // Stub components for pages you haven’t built yet:
 const ComingSoonGetRec = () => (
   <div style={{ padding: 40, textAlign: 'center' }}>
     <h2>Get Recommendation Coming Soon!</h2>
-  </div>
-);
-const ComingSoonFeatures = () => (
-  <div style={{ padding: 40, textAlign: 'center' }}>
-    <h2>Features Coming Soon!</h2>
   </div>
 );
 
@@ -64,12 +66,17 @@ function App() {
             <Route path="/register"       element={wrap(Register)} />
             <Route path="/reset-password" element={wrap(ResetPassword)} />
             <Route path="/getrec_pg1"     element={wrap(ComingSoonGetRec)} />
-            <Route path="/features"       element={wrap(ComingSoonFeatures)} />
             <Route path="/help-support"   element={wrap(HelpAndSupport)} />
             <Route path="/aboutus"        element={wrap(AboutUs)} />
             <Route path="/help-support/faq" element={wrap(FAQ)} />
-            <Route path="/help-support/contact-us" element={wrap(ContactUsHelp)}
-  />
+            <Route path="/help-support/contact-us" element={wrap(ContactUsHelp)}/>
+
+            {/* FEATURES ROUTES */}
+            <Route path="/features"                       element={wrap(FeaturesLanding)} />
+            <Route path="/features/repository"            element={wrap(Repository)} />
+            <Route path="/features/quiz-generator"        element={wrap(QuizGenerator)} />
+            <Route path="/features/my-quizzes"            element={wrap(MyQuizzes)} />
+            <Route path="/features/analytics"             element={wrap(Analytics)} />
             {/* Logout clears state & redirects to login */}
             <Route path="/logout" element={<Logout />} />
 

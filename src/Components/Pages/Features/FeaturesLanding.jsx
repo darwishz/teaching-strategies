@@ -39,6 +39,7 @@ export default function FeaturesLanding() {
             >
               Analytics Dashboard
             </Link>
+            <Link to="/features/my-quizzes"     className="hns-button">My Quizzes</Link>
           </section>
         </div>
       </div>
