@@ -1,0 +1,120 @@
+/* ── Layout: mimic login page columns ── */
+.hns-layout {
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+    padding-top: 80px;
+  }
+  
+  .hns-layout .column {
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Left & Right columns: swap in your own images or reuse login ones */
+  .hns-layout .column.left {
+    width: 28%;
+    background-image: url('../../assets/Images/sign_in_leftside.png');
+  }
+  .hns-layout .column.right {
+    width: 28%;
+    background-image: url('../../assets/Images/sign_in_rightside.png');
+  }
+  
+  /* Middle column: flex container to center the card */
+  .hns-layout .column.middle {
+    width: 44%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* we’ll handle spacing inside the card */
+  }
+  
+  /* ── The white “card” ── */
+  .hns-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    padding: 40px 30px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* ── Header inside the card ── */
+  .hns-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  }
+  .hns-header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #2a2a2a;
+  }
+  .hns-description {
+    margin-top: 12px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #555;
+  }
+  
+  /* ── Button row ── */
+  .hns-overview {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* ── Boxed buttons ── */
+  .hns-button {
+    display: inline-block;
+    padding: 24px 48px;
+    background-color: #363636;
+    color: #fff;            /* changed from #d9d9d9 */
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 180px;
+    text-align: center;
+  }
+  
+  .hns-button:hover {
+    background-color: #e6b584;
+    color: #363636;
+    transform: translateY(-2px);
+  }
+  
+  /* ── Responsive: stack on narrow screens ── */
+  @media (max-width: 900px) {
+    .hns-layout {
+      flex-direction: column;
+    }
+    .hns-layout .column.left,
+    .hns-layout .column.right {
+      display: none;
+    }
+    .hns-layout .column.middle {
+      width: 100%;
+      padding: 40px 0;
+    }
+    .hns-button {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+  /* Force pure white text on all link states for our buttons */
+.hns-button,
+.hns-button:link,
+.hns-button:visited,
+.hns-button:hover,
+.hns-button:active,
+.hns-button:focus {
+ color: #fff !important;
+ text-decoration: none;   
+}
